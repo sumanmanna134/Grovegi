@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "820892597212",
+    "project_id": "grovegi-b4bd0",
+    "storage_bucket": "grovegi-b4bd0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:820892597212:android:e881b33aa270e95d506d19",
+        "android_client_info": {
+          "package_name": "com.example.grovegi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "820892597212-us7k7b10f1tqe9lhmufsl2c0e3r48v8c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.grovegi",
+            "certificate_hash": "16fc13092f449abad2726cabe3aa448e043288b7"
+          }
+        },
+        {
+          "client_id": "820892597212-c97hrie5hfp9q7facas1j3e4tbu2k3qr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5f7TVdq1EsJyHFoNPwFeNdXgM_1ek6lo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "820892597212-c97hrie5hfp9q7facas1j3e4tbu2k3qr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
