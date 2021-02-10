@@ -1,6 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:grovegi/Blocs/auth_bloc_dart.dart';
+import 'package:grovegi/routing/routeconstant.dart';
 import 'package:grovegi/src/screens/Signup/components/SignUpBody.dart';
-class Signup extends StatelessWidget {
+import 'package:provider/provider.dart';
+class Signup extends StatefulWidget {
+  @override
+  _SignupState createState() => _SignupState();
+}
+
+class _SignupState extends State<Signup> {
+
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    final authBloc = Provider.of<Auth_Bloc>(context, listen: false);
+    authBloc.user.listen((user) {
+      if(user!=null) Get.offAllNamed(RouteConstant.landing);
+    });
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
