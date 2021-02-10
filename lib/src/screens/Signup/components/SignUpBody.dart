@@ -5,6 +5,8 @@ import 'package:grovegi/Components/socialcard.dart';
 import 'package:grovegi/config/Size/SizeConfig.dart';
 import 'package:grovegi/config/constant/AppString.dart';
 import 'package:grovegi/routing/routeconstant.dart';
+import 'package:grovegi/src/screens/Signup/components/SignUpForm.dart';
+import 'package:grovegi/src/screens/login/components/SignInForm.dart';
 class SignUpBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -20,7 +22,7 @@ class SignUpBody extends StatelessWidget {
                 Text(AppString.RegisterTitle, style: TextStyle(color:  Colors.black, fontSize: getProportionateScreenWidth(28), fontWeight: FontWeight.bold),),
                 Text(AppString.RegisterSubtitle, textAlign: TextAlign.center,),
                 SizedBox(height: SizeConfig.screenHeight * 0.08),
-                // SignInForm(),
+                SignUpForm(),
                 SizedBox(height: SizeConfig.screenHeight * 0.08),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,

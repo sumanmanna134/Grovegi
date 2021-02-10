@@ -39,13 +39,18 @@ class _SignInFormState extends State<SignInForm> {
         buildPasswordFromField(authBloc),
         SizedBox(height: getProportionateScreenHeight(10)),
         SizedBox(height: getProportionateScreenHeight(20)),
-        DefaultButton(
-          text: "Continue",
-          press: (){
-          },
+        StreamBuilder<bool>(
+          stream: authBloc.isValid,
+          builder: (context, snapshot) {
+            return DefaultButton(
+              text: "Continue",
+              press: (snapshot.data==true)?(){
+                authBloc.loginEmail();
+
+              }:null,
+            );
+          }
         )
-
-
       ],
     );
   }
@@ -73,7 +78,6 @@ class _SignInFormState extends State<SignInForm> {
     return StreamBuilder<String>(
       stream: auth_bloc.email,
       builder: (context, snapshot) {
-        print(snapshot.error.toString());
         return TextField(
           keyboardType: TextInputType.emailAddress,
           onChanged: auth_bloc.changeEmail,
