@@ -5,6 +5,7 @@ import 'package:grovegi/src/screens/ForgotPassword/forgot_password_screen.dart';
 import 'package:grovegi/src/screens/Signup/signup.dart';
 import 'package:grovegi/src/screens/landing.dart';
 import 'package:grovegi/src/screens/login/login.dart';
+import 'package:grovegi/src/screens/vendor/vendor.dart';
 
 
 abstract class Routes {
@@ -22,6 +23,9 @@ abstract class Routes {
 
       case RouteConstant.forgotPassword:
         return _NoAnimationMaterialPageRoute(builder: (_) => ForgotPasswordScreen(), name: RouteConstant.forgotPassword);
+
+      case RouteConstant.vendor:
+        return _NoAnimationMaterialPageRoute(builder: (_) => Vendor(), name: RouteConstant.vendor);
 
       default:
         return _NoAnimationMaterialPageRoute<dynamic>(builder: (_) => Login(), name: RouteConstant.login);

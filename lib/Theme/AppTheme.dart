@@ -30,6 +30,7 @@ TextTheme textTheme() {
   return TextTheme(
     bodyText1: TextStyle(color: kTextColor),
     bodyText2: TextStyle(color: kTextColor),
+    headline1: TextStyle(color: Colors.white)
   );
 }
 
@@ -37,12 +38,12 @@ AppBarTheme appBarTheme() {
   return AppBarTheme(
     color: Colors.white,
     elevation: 0,
-    centerTitle: true,
     titleSpacing: 1.1,
     brightness: Brightness.light,
-    iconTheme: IconThemeData(color: Colors.black),
+    iconTheme: IconThemeData(color: Colors.white),
     textTheme: TextTheme(
       headline6: TextStyle(color: Color(0XFF8B8B8B), fontSize: 18),
+
     ),
   );
 }
