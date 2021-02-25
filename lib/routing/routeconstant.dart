@@ -5,5 +5,6 @@ abstract class RouteConstant{
   static const String signup = '/signup';
   static const String landing  = '/landing';
   static const String forgotPassword = '/forgot_password';
+  static const String vendor = '/vendor';
 
 }

@@ -5,10 +5,14 @@ class DefaultButton extends StatelessWidget {
   const DefaultButton({
     Key key,
     this.text,
-    this.press,
+    this.press, this.backgroundColor, this.textColor,
   }) : super(key: key);
   final String text;
   final Function press;
+
+  final Color backgroundColor;
+  final Color textColor;
+
 
   @override
   Widget build(BuildContext context) {
@@ -16,17 +20,16 @@ class DefaultButton extends StatelessWidget {
       width: double.infinity,
       height: getProportionateScreenHeight(56),
       child: FlatButton(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20) ),
         disabledColor: Colors.grey,
         disabledTextColor: Colors.white,
-
-        color: kPrimaryColor,
+        color: backgroundColor!=null?backgroundColor:kPrimaryColor,
         onPressed: press,
         child: Text(
           text,
           style: TextStyle(
             fontSize: getProportionateScreenWidth(18),
-            color: Colors.white,
+            color: textColor!=null?textColor:Colors.white,
           ),
         ),
       ),

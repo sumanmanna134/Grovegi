@@ -8,7 +8,7 @@ class UnSupportedPlatForm extends StatelessWidget {
     SizeConfig().init(context);
     return Scaffold(
       body: Center(
-        child: Text("You can't Access this on Web", style: Theme.of(context).textTheme.headline2, ),
+        child: Text("", style: Theme.of(context).textTheme.headline2, ),
       ),
     );
   }
